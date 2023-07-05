@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400&display=swap');
+
+* {
+    font-family: poppins ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 0.7)), url(bg/bg.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    border: 5px solid yellow;
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: inline-block;
+    background-image: radial-gradient(
+   rgb(143, 23, 23),
+   rgb(97, 8, 33), rgb);   
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position : fixed;
+    width : 100%;
+    padding : 20px 0px;
+    margin-left: 0px;
+    z-index: 1;
+    background: #6c066263;
+    
+    
+}
+header .logo{
+background: transparent;
+margin-left: 40px;
+}
+
+header .logo a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    background: transparent;
+
+}
+
+header .logo i {
+    font-size: 25px;
+    color: white;
+   font-weight: 900;
+   background: transparent;
+    
+}
+
+header .logo b {
+    color: red;
+    background: transparent;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+}
+
+.menu i {
+    display: none;
+}
+
+.menu .menu-content{
+    display:flex ;
+    flex-direction: row;
+    gap: 10px;
+    background: #6c066263;
+}
+
+.menu-content a {
+
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    z-index: 1;
+   background: transparent;}
+
+.menu-content a:hover {
+    color: red;
+}
+
+
+.main {
+    height: 600px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    
+    
+}
+.main .main-left{
+ width: 700px;
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ justify-content: center;
+ gap: 10px;
+ padding: 0 50px;
+ color: white;
+ background: transparent;
+
+
+}
+.main-left h1 {
+    font-size: 46px;
+    font-family: "Russo one";
+    background: transparent;
+   
+
+}
+.main p {
+    color: #c0d666;
+    font-weight: 600;
+    width: 150px;
+    font-size: 34px;
+    animation: anim1 4s ease-in-out 0s 1000;
+    background: transparent;
+}
+
+@keyframes anim1 {
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+    
+}
+
+
+.main-left button{
+    font-size: 20px;
+    border: 2px solid #cab2bb;
+    padding: 7px;
+    background: transparent;
+    color: white;
+}
+.main-left button:hover{
+    border-radius: 10px;
+    border: 2px solid rgb(94,17,94);
+    transition: ease 0.2s;
+}
+.social{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1;
+    background: #6c066263;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    animation: reklam 3s ease-in;
+    animation-iteration-count: infinite;
+    background: transparent;
+}
+@keyframes reklam {
+    0%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+    
+}
+.social i{
+    width: 100px;
+    height: px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+}
+.comments{
+    border: 5px solid blue;
+    color: white;
+    z-index: 1;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding: 30px;
+    font-family: "poppins";
+}
+
+
+
+/*RESPONSİVE AYARLAR*/
+/*tablet boyutu 768px-1023px*/
+
+@media (min-width :768px)and (max-width :1023px) {
+
+    .menu i {
+
+        display: flex;
+        font-size: 36px;
+        color: white;
+        background: #6c066263;
+    }
+    .menu:hover >.menu-content {
+        display: flex;
+        flex-direction: column;
+        background-color:#6c066263;
+        font-size: 16px;
+        position: fixed, ;
+        gap: 20px;
+        top: 35px;
+        right: 15px;
+        padding: 10px ;
+        border-radius: 20px;
+        position: absolute;
+        
+    }
+
+    .menu .menu-content {
+        display: none;
+
+    }
+
+}
+/*TELEFON EN KÜÇÜK BOYUT*/
+@media (max-width :767px) {
+    
+    .menu i {
+        display: flex;
+        font-size: 36px;
+        color: white;
+        background: #6c066263;
+    }
+    .menu .menu-content {
+        display: none;
+    }
+    .menu:hover >.menu-content {
+        display: flex;
+        flex-direction: column;
+        background-color: #ccc;
+        color: white;
+        font-size: 16px;
+        position: fixed;
+        top: 35px;
+        right: 15px;
+        gap: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        background: #6c066263;
+    }
+    
